@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts - TrunkEye</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .category-tag {
+            transition: all 0.3s ease;
+        }
+        .category-tag:hover {
+            background-color: #3b82f6;
+            color: white;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-blue-800">TrunkEye</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
+                        <a href="services.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Services</a>
+                        <a href="posts.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Posts</a>
+                        <a href="explore.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Explore</a>
+<a href="jobs.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Jobs</a>
+                        <a href="contact.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out">Get Started</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMobileMenu()">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-feather="menu" id="mobile-menu-button"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden hidden" id="mobile-menu">
+                <div class="pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
+                    <a href="about.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
+                    <a href="services.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Services</a>
+                    <a href="posts.html" class="block px-3 py-2 text-base font-medium text-gray-900 bg-blue-50">Posts</a>
+                    <a href="jobs.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Jobs</a>
+                    <a href="explore.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Explore</a>
+                    <a href="contact.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+                </div>
+                <div class="pt-4 pb-3 border-t border-gray-200">
+                    <div class="px-5">
+                        <a href="contact.html" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out">Get Started</a>
+                    </div>
+                </div>
+</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-blue-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                Blog Posts
+            </h1>
+            <p class="mt-6 text-xl max-w-3xl mx-auto">
+                Insights, news and updates from our team of experts
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="lg:flex lg:space-x-8">
+            <!-- Posts -->
+            <div class="lg:w-2/3">
+                <!-- Featured Post -->
+                <div class="post-card bg-white overflow-hidden shadow rounded-lg mb-10 transition duration-300 ease-in-out">
+                    <div class="relative h-80 w-full">
+                        <img class="absolute h-full w-full object-cover" src="http://static.photos/technology/1200x630/1" alt="Featured post">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="category-tag bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Featured</span>
+                                <span class="category-tag bg-gray-100 text-gray-800 text-xs font-semibold px-3 py-1 rounded-full">Digital Transformation</span>
+                            </div>
+                            <h2 class="text-2xl font-bold text-white">The Future of Digital Transformation in 2023</h2>
+                            <p class="mt-2 text-gray-300">How emerging technologies are reshaping industries</p>
+                            <div class="mt-4 flex items-center text-sm text-gray-300">
+                                <img class="h-6 w-6 rounded-full" src="http://static.photos/people/200x200/1" alt="Author">
+                                <span class="ml-2">John Smith • June 15, 2023 • 8 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="mb-8">
+                    <div class="flex flex-wrap gap-2">
+                        <button class="category-tag bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-full">All Posts</button>
+                        <button class="category-tag bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full">Technology</button>
+                        <button class="category-tag bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full">FinTech</button>
+                        <button class="category-tag bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full">Digital Marketing</button>
+                        <button class="category-tag bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full">Industry News</button>
+                    </div>
+                </div>
+
+                <!-- Posts Grid -->
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- Post 1 -->
+                    <div class="post-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out">
+                        <div class="md:flex">
+                            <div class="md:flex-shrink-0 md:w-48">
+                                <img class="h-full w-full object-cover" src="http://static.photos/finance/320x240/1" alt="FinTech trends">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center">
+                                    <span class="category-tag bg-gray-100 text-gray-800 text-xs font-semibold px-3 py-1 rounded-full">FinTech</span>
+                                    <span class="ml-2 text-xs text-gray-500">June 10, 2023</span>
+                                </div>
+                                <div class="mt-2">
+                                    <h3 class="text-xl font-semibold text-gray-900">Emerging FinTech Trends in the Middle East</h3>
+                                    <p class="mt-3 text-gray-600">How digital banking and payment solutions are changing the financial landscape...</p>
+                                </div>
+                                <div class="mt-4 flex items-center">
+                                    <img class="h-8 w-8 rounded-full" src="http://static.photos/people/200x200/2" alt="Author">
+                                    <div class="ml-2">
+                                        <p class="text-sm font-medium text-gray-900">Sarah Johnson</p>
+                                        <p class="text-xs text-gray-500">FinTech Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="post-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out">
+                        <div class="md:flex">
+                            <div class="md:flex-shrink-0 md:w-48">
+                                <img class="h-full w-full object-cover" src="http://static.photos/technology/320x240/2" alt="AI applications">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center">
+                                    <span class="category-tag bg-gray-100 text-gray-800 text-xs font-semibold px-3 py-1 rounded-full">Technology</span>
+                                    <span class="ml-2 text-xs text-gray-500">May 28, 2023</span>
+                                </div>
+                                <div class="mt-2">
+                                    <h3 class="text-xl font-semibold text-gray-900">Practical Applications of AI in Business</h3>
+                                    <p class="mt-3 text-gray-600">From customer service to predictive analytics, AI is transforming business operations...</p>
+                                </div>
+                                <div class="mt-4 flex items-center">
+                                    <img class="h-8 w-8 rounded-full" src="http://static.photos/people/200x200/3" alt="Author">
+                                    <div class="ml-2">
+                                        <p class="text-sm font-medium text-gray-900">Michael Chen</p>
+                                        <p class="text-xs text-gray-500">AI Researcher</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 3 -->
+                    <div class="post-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out">
+                        <div class="md:flex">
+                            <div class="md:flex-shrink-0 md:w-48">
+                                <img class="h-full w-full object-cover" src="http://static.photos/office/320x240/1" alt="Remote work">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center">
+                                    <span class="category-tag bg-gray-100 text-gray-800 text-xs font-semibold px-3 py-1 rounded-full">Industry News</span>
+                                    <span class="ml-2 text-xs text-gray-500">May 15, 2023</span>
+                                </div>
+                                <div class="mt-2">
+                                    <h3 class="text-xl font-semibold text-gray-900">The Future of Remote Work in Tech Companies</h3>
+                                    <p class="mt-3 text-gray-600">How companies are adapting their policies and infrastructure for hybrid work models...</p>
+                                </div>
+                                <div class="mt-4 flex items-center">
+                                    <img class="h-8 w-8 rounded-full" src="http://static.photos/people/200x200/4" alt="Author">
+                                    <div class="ml-2">
+                                        <p class="text-sm font-medium text-gray-900">Emma Rodriguez</p>
+                                        <p class="text-xs text-gray-500">HR Consultant</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 4 -->
+                    <div class="post-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out">
+                        <div class="md:flex">
+                            <div class="md:flex-shrink-0 md:w-48">
+                                <img class="h-full w-full object-cover" src="http://static.photos/education/320x240/1" alt="Digital skills">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center">
+                                    <span class="category-tag bg-gray-100 text-gray-800 text-xs font-semibold px-3 py-1 rounded-full">Digital Marketing</span>
+                                    <span class="ml-2 text-xs text-gray-500">May 5, 2023</span>
+                                </div>
+                                <div class="mt-2">
+                                    <h3 class="text-xl font-semibold text-gray-900">Essential Digital Skills for 2023</h3>
+                                    <p class="mt-3 text-gray-600">The most valuable digital skills professionals should develop this year...</p>
+                                </div>
+                                <div class="mt-4 flex items-center">
+                                    <img class="h-8 w-8 rounded-full" src="http://static.photos/people/200x200/5" alt="Author">
+                                    <div class="ml-2">
+                                        <p class="text-sm font-medium text-gray-900">David Wilson</p>
+                                        <p class="text-xs text-gray-500">Digital Strategist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="mt-10 flex items-center justify-between">
+                    <button class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                        <i data-feather="chevron-left" class="mr-2 h-4 w-4"></i>
+                        Previous
+                    </button>
+                    <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                        <div>
+                            <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                                <a href="#" class="relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">1</a>
+                                <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">2</a>
+                                <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">3</a>
+                                <span class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500">...</span>
+                                <a href="#" class="relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">8</a>
+                            </nav>
+                        </div>
+                    </div>
+                    <button class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                        Next
+                        <i data-feather="chevron-right" class="ml-2 h-4 w-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:w-1/3 lg:pl-8 mt-8 lg:mt-0">
+                <!-- Categories -->
+                <div class="bg-white shadow rounded-lg p-6 mb-6">
+                    <h3 class="text-lg font-medium text-gray-900 mb-4">Categories</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="flex items-center justify-between text-gray-600 hover:text-blue-600">
+                                <span>Technology</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2 py-1 rounded-full">24</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-between text-gray-600 hover:text-blue-600">
+                                <span>FinTech</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2 py-1 rounded-full">18</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-between text-gray-600 hover:text-blue-600">
+                                <span>Digital Marketing</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2 py-1 rounded-full">15</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-between text-gray-600 hover:text-blue-600">
+                                <span>Industry News</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2 py-1 rounded-full">12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-between text-gray-600 hover:text-blue-600">
+                                <span>Case Studies</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2 py-1 rounded-full">8</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Popular Posts -->
+                <div class="bg-white shadow rounded-lg p-6 mb-6">
+                    <h3 class="text-lg font-medium text-gray-900 mb-4">Popular Posts</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="group flex items-start">
+                                <div class="flex-shrink-0 h-16 w-16">
+                                    <img class="h-full w-full object-cover rounded" src="http://static.photos/technology/200x200/1" alt="Post thumbnail">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-medium text-gray-900 group-hover:text-blue-600">The Impact of Blockchain on Enterprise Security</h4>
+                                    <p class="text-xs text-gray-500 mt-1">June 2, 2023</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="group flex items-start">
+                                <div class="flex-shrink-0 h-16 w-16">
+                                    <img class="h-full w-full object-cover rounded" src="http://static.photos/finance/200x200/1" alt="Post thumbnail">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-medium text-gray-900 group-hover:text-blue-600">How AI is Transforming Financial Analysis</h4>
+                                    <p class="text-xs text-gray-500 mt-1">May 22, 2023</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="group flex items-start">
+                                <div class="flex-shrink-0 h-16 w-16">
+                                    <img class="h-full w-full object-cover rounded" src="http://static.photos/office/200x200/1" alt="Post thumbnail">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-medium text-gray-900 group-hover:text-blue-600">5 Essential Tools for Remote Development Teams</h4>
+                                    <p class="text-xs text-gray-500 mt-1">May 10, 2023</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="bg-blue-50 rounded-lg p-6">
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Subscribe to our newsletter</h3>
+                    <p class="text-sm text-gray-600 mb-4">Get the latest posts delivered right to your inbox</p>
+                    <form class="space-y-3">
+                        <div>
+                            <label for="email" class="sr-only">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="Your email address" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <span class="text-2xl font-bold text-white">TrunkEye</span>
+                    <p class="text-gray-300 text-base">
+                        Delivering cutting-edge digital solutions to transform your business.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Facebook</span>
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Twitter</span>
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">LinkedIn</span>
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Instagram</span>
+                            <i data-feather="instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Solutions
+                            </h3>
+                            <div class="mt-4 space-y-4">
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Software Development
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Digital Marketing
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Financial Services
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Enterprise Solutions
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Support
+                            </h3>
+                            <div class="mt-4 space-y-4">
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Documentation
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Guides
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    API Status
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Company
+                            </h3>
+                            <div class="mt-4 space-y-4">
+                                <a href="about.html" class="text-base text-gray-400 hover:text-white">
+                                    About
+                                </a>
+                                <a href="jobs.html" class="text-base text-gray-400 hover:text-white">
+                                    Jobs
+                                </a>
+                                <a href="posts.html" class="text-base text-gray-400 hover:text-white">
+                                    Blog
+                                </a>
+                                <a href="contact.html" class="text-base text-gray-400 hover:text-white">
+                                    Contact
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Legal
+                            </h3>
+                            <div class="mt-4 space-y-4">
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Privacy
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Terms
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-base text-gray-400 xl:text-center">
+                    &copy; 2023 TrunkEye. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        feather.replace();
+        
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('mobile-menu-button');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                feather.replace(button, 'x');
+            } else {
+                menu.classList.add('hidden');
+                feather.replace(button, 'menu');
+            }
+        }
+    </script>
+</body>
+</html>

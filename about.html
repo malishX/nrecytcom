@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - TrunkEye</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 50px;
+            height: calc(100% - 50px);
+            width: 2px;
+            background-color: #e5e7eb;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-blue-800">TrunkEye</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="about.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
+                        <a href="explore.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Explore</a>
+<a href="services.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Services</a>
+                        <a href="posts.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Posts</a>
+                        <a href="jobs.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Jobs</a>
+                        <a href="contact.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out">Get Started</button>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-blue-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                About TrunkEye
+            </h1>
+            <p class="mt-6 text-xl max-w-3xl mx-auto">
+                Delivering cutting-edge digital solutions with a team of 50+ professionals across diverse industries.
+            </p>
+        </div>
+    </div>
+
+    <!-- Our Story -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Story</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    From startup to industry leader
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Founded in Dubai, we've grown to become a trusted partner for digital transformation.
+                </p>
+            </div>
+
+            <div class="mt-16">
+                <div class="space-y-20 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20">
+                    <!-- Vision -->
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="eye"></i>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Vision</p>
+                        <p class="mt-2 ml-16 text-base text-gray-500">
+                            To be the most trusted digital transformation partner in the region, delivering innovative solutions that drive business success.
+                        </p>
+                    </div>
+
+                    <!-- Mission -->
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="target"></i>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Mission</p>
+                        <p class="mt-2 ml-16 text-base text-gray-500">
+                            Empower businesses through technology by providing comprehensive digital solutions tailored to their unique needs.
+                        </p>
+                    </div>
+
+                    <!-- Values -->
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="heart"></i>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Values</p>
+                        <p class="mt-2 ml-16 text-base text-gray-500">
+                            Integrity, Innovation, Excellence, Collaboration, and Customer Success drive everything we do.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Journey</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Milestones and Achievements
+                </p>
+            </div>
+
+            <div class="mt-16 flow-root">
+                <ul class="-mb-8">
+                    <!-- Timeline Item 1 -->
+                    <li class="relative pb-8 timeline-item">
+                        <div class="relative flex items-start space-x-3">
+                            <div>
+                                <div class="relative px-1">
+                                    <div class="h-8 w-8 bg-blue-500 rounded-full ring-8 ring-gray-50 flex items-center justify-center">
+                                        <i data-feather="flag" class="text-white h-4 w-4"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="min-w-0 flex-1 py-1.5">
+                                <div class="text-sm text-gray-500">
+                                    <span class="font-medium text-gray-900">Founded</span> in Dubai
+                                    <span class="whitespace-nowrap">2015</span>
+                                </div>
+                                <p class="mt-2 text-sm text-gray-500">
+                                    Started with 5 team members focusing on software development for local businesses.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Timeline Item 2 -->
+                    <li class="relative pb-8 timeline-item">
+                        <div class="relative flex items-start space-x-3">
+                            <div>
+                                <div class="relative px-1">
+                                    <div class="h-8 w-8 bg-blue-500 rounded-full ring-8 ring-gray-50 flex items-center justify-center">
+                                        <i data-feather="users" class="text-white h-4 w-4"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="min-w-0 flex-1 py-1.5">
+                                <div class="text-sm text-gray-500">
+                                    <span class="font-medium text-gray-900">Team Expansion</span> to 20+
+                                    <span class="whitespace-nowrap">2017</span>
+                                </div>
+                                <p class="mt-2 text-sm text-gray-500">
+                                    Expanded our services to include digital marketing and financial services, growing our team significantly.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Timeline Item 3 -->
+                    <li class="relative pb-8 timeline-item">
+                        <div class="relative flex items-start space-x-3">
+                            <div>
+                                <div class="relative px-1">
+                                    <div class="h-8 w-8 bg-blue-500 rounded-full ring-8 ring-gray-50 flex items-center justify-center">
+                                        <i data-feather="award" class="text-white h-4 w-4"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="min-w-0 flex-1 py-1.5">
+                                <div class="text-sm text-gray-500">
+                                    <span class="font-medium text-gray-900">Industry Recognition</span> Award
+                                    <span class="whitespace-nowrap">2019</span>
+                                </div>
+                                <p class="mt-2 text-sm text-gray-500">
+                                    Received the "Emerging Tech Company of the Year" award at the Middle East Technology Awards.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Timeline Item 4 -->
+                    <li class="relative pb-8 timeline-item">
+                        <div class="relative flex items-start space-x-3">
+                            <div>
+                                <div class="relative px-1">
+                                    <div class="h-8 w-8 bg-blue-500 rounded-full ring-8 ring-gray-50 flex items-center justify-center">
+                                        <i data-feather="globe" class="text-white h-4 w-4"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="min-w-0 flex-1 py-1.5">
+                                <div class="text-sm text-gray-500">
+                                    <span class="font-medium text-gray-900">International Expansion</span>
+                                    <span class="whitespace-nowrap">2020</span>
+                                </div>
+                                <p class="mt-2 text-sm text-gray-500">
+                                    Began serving clients across the GCC region, expanding our footprint beyond the UAE.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Timeline Item 5 -->
+                    <li class="relative timeline-item">
+                        <div class="relative flex items-start space-x-3">
+                            <div>
+                                <div class="relative px-1">
+                                    <div class="h-8 w-8 bg-blue-500 rounded-full ring-8 ring-gray-50 flex items-center justify-center">
+                                        <i data-feather="trending-up" class="text-white h-4 w-4"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="min-w-0 flex-1 py-1.5">
+                                <div class="text-sm text-gray-500">
+                                    <span class="font-medium text-gray-900">50+ Professionals</span> Team
+                                    <span class="whitespace-nowrap">2023</span>
+                                </div>
+                                <p class="mt-2 text-sm text-gray-500">
+                                    Now with over 50 professionals serving clients across 6 industries with comprehensive digital solutions.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Team</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Meet Our Leadership
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    A diverse team of experts driving innovation and excellence.
+                </p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Team Member 1 -->
+                <div class="team-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 ease-in-out">
+                    <div class="relative h-64">
+                        <img class="w-full h-full object-cover" src="http://static.photos/people/640x360/1" alt="CEO">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/30"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-xl font-bold text-white">Ahmed Al-Mansoori</h3>
+                            <p class="text-blue-300">Founder & CEO</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-500">
+                            Visionary leader with 15+ years in technology and business transformation, driving TrunkEye's strategic direction.
+                        </p>
+                        <div class="mt-4 flex space-x-4">
+                            <a href="#" class="text-blue-500 hover:text-blue-700">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                            <a href="#" class="text-blue-500 hover:text-blue-700">
+                                <i data-feather="twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 ease-in-out">
+                    <div class="relative h-64">
+                        <img class="w-full h-full object-cover" src="http://static.photos/people/640x360/2" alt="CTO">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/30"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-xl font-bold text-white">Sarah Johnson</h3>
+                            <p class="text-blue-300">Chief Technology Officer</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-500">
+                            Technology strategist with expertise in enterprise architecture and digital transformation solutions.
+                        </p>
+                        <div class="mt-4 flex space-x-4">
+                            <a href="#" class="text-blue-500 hover:text-blue-700">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                            <a href="#" class="text-blue-500 hover:text-blue-700">
+                                <i data-feather="twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 ease-in-out">
+                    <div class="relative h-64">
+                        <img class="w-full h-full object-cover" src="http://static.photos/people/640x360/3" alt="CFO">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/30"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-xl font-bold text-white">Mohammed Khan</h3>
+                            <p class="text-blue-300">Chief Financial Officer</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-500">
+                            Financial expert overseeing our operations and ensuring sustainable growth and compliance.
+                        </p>
+                        <div class="mt-4 flex space-x-4">
+                            <a href="#" class="text-blue-500 hover:text-blue-700">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                            <a href="#" class="text-blue-500 hover:text-blue-700">
+                                <i data-feather="twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="jobs.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Join Our Team
+                    <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Culture Section -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Culture</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Work Environment
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    We foster a culture of innovation, collaboration, and continuous learning.
+                </p>
+            </div>
+
+            <div class="mt-16">
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="users" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">Collaboration</h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    We believe in working together across teams and departments to achieve the best results for our clients.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="book" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">Learning</h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    Continuous learning is at our core, with regular training sessions and knowledge sharing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="heart" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">Well-being</h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    We prioritize our team's well-being with flexible work arrangements and wellness programs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-blue-700">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base font-semibold text-blue-300 tracking-wide uppercase">Ready to learn more?</h2>
+                <p class="mt-1 text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
+                    Let's build something great together
+                </p>
+                <p class="max-w-xl mt-5 mx-auto text-xl text-blue-100">
+                    Discover how our team can help transform your business.
+                </p>
+                <div class="mt-8">
+                    <a href="contact.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-700 bg-white hover:bg-blue-50">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <span class="text-2xl font-bold text-white">TrunkEye</span>
+                    <p class="text-gray-300 text-base">
+                        Delivering cutting-edge digital solutions to transform your business.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Facebook</span>
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Twitter</span>
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">LinkedIn</span>
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Instagram</span>
+                            <i data-feather="instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Solutions
+                            </h3>
+                            <div class="mt-4 space-y-4">
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Software Development
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Digital Marketing
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Financial Services
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Enterprise Solutions
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Support
+                            </h3>
+                            <div class="mt-4 space-y-4">
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Documentation
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Guides
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    API Status
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-{"ok":false,"message":"terminated"}
+</body>
+</html>

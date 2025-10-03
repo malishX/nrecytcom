@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - TrunkEye</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-blue-800">TrunkEye</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
+                        <a href="services.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Services</a>
+                        <a href="posts.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Posts</a>
+                        <a href="jobs.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Jobs</a>
+                        <a href="explore.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Explore</a>
+<a href="contact.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out">Get Started</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMobileMenu()">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-feather="menu" id="mobile-menu-button"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden hidden" id="mobile-menu">
+                <div class="pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
+                    <a href="about.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
+                    <a href="services.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Services</a>
+                    <a href="posts.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Posts</a>
+                    <a href="jobs.html" class="block px-3 py-2 text-base font-medium text-gray-900 bg-blue-50">Jobs</a>
+                    <a href="explore.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Explore</a>
+                    <a href="contact.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+                </div>
+                <div class="pt-4 pb-3 border-t border-gray-200">
+                    <div class="px-5">
+                        <a href="contact.html" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out">Get Started</a>
+                    </div>
+                </div>
+</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-blue-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                Join Our Team
+            </h1>
+            <p class="mt-6 text-xl max-w-3xl mx-auto">
+                Explore exciting career opportunities with TrunkEye
+            </p>
+        </div>
+    </div>
+
+    <!-- Job Openings -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Current Openings</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Available Positions
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    We're looking for talented individuals to join our growing team
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- Job 1 -->
+                    <div class="job-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out">
+                        <div class="px-6 py-5">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        Frontend Developer
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-500">
+                                        Full-time • Dubai, UAE
+                                    </p>
+                                </div>
+                                <div class="ml-4 flex-shrink-0">
+                                    <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                                        Development
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base text-gray-500">
+                                    We're looking for a skilled Frontend Developer to join our team. You'll work with modern JavaScript frameworks to build responsive web applications.
+                                </p>
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">3+ years of experience with React</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Strong knowledge of HTML5, CSS3, and JavaScript</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Experience with state management (Redux or Context API)</span>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
+                                    Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="job-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out">
+                        <div class="px-6 py-5">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        Backend Developer
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-500">
+                                        Full-time • Remote
+                                    </p>
+                                </div>
+                                <div class="ml-4 flex-shrink-0">
+                                    <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                                        Development
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base text-gray-500">
+                                    Join our backend team to build scalable APIs and microservices. You'll work with Node.js, Python, and cloud technologies.
+                                </p>
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">5+ years of backend development experience</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Strong knowledge of databases (SQL and NoSQL)</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Experience with cloud platforms (AWS, Azure, or GCP)</span>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
+                                    Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="job-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out">
+                        <div class="px-6 py-5">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        Digital Marketing Specialist
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-500">
+                                        Full-time • Dubai, UAE
+                                    </p>
+                                </div>
+                                <div class="ml-4 flex-shrink-0">
+                                    <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                                        Marketing
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base text-gray-500">
+                                    We're looking for a Digital Marketing Specialist to lead our online marketing efforts across multiple channels.
+                                </p>
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">3+ years of digital marketing experience</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Proficiency in SEO, SEM, and social media marketing</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Experience with analytics tools (Google Analytics, etc.)</span>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
+                                    Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 4 -->
+                    <div class="job-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out">
+                        <div class="px-6 py-5">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        UX/UI Designer
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-500">
+                                        Contract • Remote
+                                    </p>
+                                </div>
+                                <div class="ml-4 flex-shrink-0">
+                                    <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                                        Design
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base text-gray-500">
+                                    Join our design team to create beautiful, intuitive interfaces for our products and clients.
+                                </p>
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Portfolio demonstrating UX/UI skills</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Experience with Figma, Sketch, or Adobe XD</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Understanding of user-centered design principles</span>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
+                                    Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Benefits</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Why Work With Us
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    We offer competitive benefits to help you thrive both professionally and personally
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Benefit 1 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="dollar-sign" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        Competitive Salary
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    We offer salaries that match your skills and experience, with regular performance reviews.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="home" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        Flexible Work Options
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    Choose between remote work, hybrid, or office-based arrangements that suit your lifestyle.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="book" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        Learning & Development
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    Annual budget for courses, conferences, and books to support your professional growth.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 4 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="heart" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        Health Insurance
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    Comprehensive health insurance coverage for you and your family.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 5 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="globe" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        Global Opportunities
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    Potential for international assignments and working with global clients.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 6 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="clock" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        Flexible Hours
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    Manage your own schedule as long as you meet your goals and team commitments.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-blue-700">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base font-semibold text-blue-300 tracking-wide uppercase">Don't see your perfect role?</h2>
+                <p class="mt-1 text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
+                    We're always looking for talent
+                </p>
+                <p class="max-w-xl mt-5 mx-auto text-xl text-blue-100">
+                    Send us your resume and we'll contact you when a matching position opens up.
+                </p>
+                <div class="mt-8">
+                    <a href="contact.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-700 bg-white hover:bg-blue-50">
+                        Submit Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <span class="text-2xl font-bold text-white">TrunkEye</span>
+                    <p class="text-gray-300 text-base">
+                        Delivering cutting-edge digital solutions to transform your business.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Facebook</span>
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Twitter</span>
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">LinkedIn</span>
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Instagram</span>
+                            <i data-feather="instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Solutions
+                            </h3>
+                            <div class="mt-4 space-y-4">
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Software Development
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Digital Marketing
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Financial Services
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Enterprise Solutions
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Support
+                            </h3>
+                            <div class="mt-4 space-y-4">
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Documentation
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Guides
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    API Status
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Company
+                            </h3>
+                            <div class="mt-4 space-y-4">
+                                <a href="about.html" class="text-base text-gray-400 hover:text-white">
+                                    About
+                                </a>
+                                <a href="jobs.html" class="text-base text-gray-400 hover:text-white">
+                                    Jobs
+                                </a>
+                                <a href="posts.html" class="text-base text-gray-400 hover:text-white">
+                                    Blog
+                                </a>
+                                <a href="contact.html" class="text-base text-gray-400 hover:text-white">
+                                    Contact
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Legal
+                            </h3>
+                            <div class="mt-4 space-y-4">
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Privacy
+                                </a>
+                                <a href="#" class="text-base text-gray-400 hover:text-white">
+                                    Terms
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-base text-gray-400 xl:text-center">
+                    &copy; 2023 TrunkEye. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        feather.replace();
+        
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('mobile-menu-button');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                feather.replace(button, 'x');
+            } else {
+                menu.classList.add('hidden');
+                feather.replace(button, 'menu');
+            }
+        }
+    </script>
+</body>
+</html>

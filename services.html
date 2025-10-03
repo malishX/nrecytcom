@@ -1,0 +1,343 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - TrunkEye</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .service-tab.active {
+            color: #3b82f6;
+            border-bottom: 2px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-blue-800">TrunkEye</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
+                        <a href="services.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Services</a>
+                        <a href="explore.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Explore</a>
+<a href="posts.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Posts</a>
+                        <a href="jobs.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Jobs</a>
+                        <a href="contact.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out">Get Started</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-blue-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                Our Services
+            </h1>
+            <p class="mt-6 text-xl max-w-3xl mx-auto">
+                Comprehensive digital solutions tailored to your business needs
+            </p>
+        </div>
+    </div>
+
+    <!-- Services Tabs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        <div class="border-b border-gray-200">
+            <nav class="-mb-px flex space-x-8 overflow-x-auto">
+                <a href="#" class="service-tab active whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                    IT Solutions
+                </a>
+                <a href="#" class="service-tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                    Digital Marketing
+                </a>
+                <a href="#" class="service-tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                    Financial Services
+                </a>
+                <a href="#" class="service-tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                    Industry Specializations
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- IT Solutions -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">IT Solutions</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Technology Services
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Cutting-edge technology solutions to power your business
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Software Development -->
+                    <div class="service-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="code" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        Software Development
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    Custom software solutions tailored to your business needs, from web to mobile applications.
+                                </p>
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Web Applications</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Mobile Apps (iOS/Android)</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Custom CMS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enterprise Architecture -->
+                    <div class="service-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="database" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        Enterprise Architecture
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    Robust enterprise solutions that scale with your business and integrate seamlessly.
+                                </p>
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">System Integration</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Cloud Migration</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">API Development</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IoT Solutions -->
+                    <div class="service-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="wifi" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        IoT Solutions
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    Connected devices and smart solutions to elevate your operations and user experience.
+                                </p>
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Smart Devices</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Real-time Monitoring</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Data Analytics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Digital Marketing Services -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Digital Marketing</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Growth Through Digital
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Strategic digital marketing to increase your online presence and customer engagement.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- SEO & Content -->
+                    <div class="service-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="search" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        SEO & Content
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    Improve your search rankings and organic traffic with our SEO optimized content.
+                                </p>
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Keyword Research</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Content Strategy</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">On-page Optimization</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Marketing -->
+                    <div class="service-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="instagram" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        Social Media Marketing
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    Build and engage your audience across all major social platforms.
+                                </p>
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Content Creation</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Community Management</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Paid Campaigns</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PPC & Advertising -->
+                    <div class="service-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="dollar-sign" class="text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        PPC & Advertising
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-base leading-6 text-gray-500">
+                                    Targeted paid advertising campaigns that deliver measurable results.
+                                </p>
+                            </div>
+                            <div class="mt-6">
+                                <div class="flex items-center">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Google Ads</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Social Ads</span>
+                                </div>
+                                <div class="flex items-center mt-2">
+                                    <i data-feather="check-circle" class="text-green-500"></i>
+                                    <span class="ml-2 text-sm text-gray-500">Retargeting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Financial Services -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Financial Services</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Financial Operations Support
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500
