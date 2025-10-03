@@ -3,507 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - TrunkEye</title>
+    <title>About Us | Spectrum Spark Foundation</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <style>
-        .timeline-item:not(:last-child)::after {
+        .timeline-container {
+            position: relative;
+        }
+        .timeline-container::before {
             content: '';
             position: absolute;
-            left: 24px;
-            top: 50px;
-            height: calc(100% - 50px);
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
             width: 2px;
-            background-color: #e5e7eb;
+            height: 100%;
+            background-color: #a5b4fc;
         }
-        .team-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        .timeline-dot {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #4f46e5;
+            z-index: 10;
+        }
+        @media (max-width: 768px) {
+            .timeline-container::before {
+                left: 20px;
+            }
+            .timeline-dot {
+                left: 20px;
+            }
         }
     </style>
 </head>
-<body class="font-sans antialiased">
+<body class="font-sans antialiased text-gray-800">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <span class="text-2xl font-bold text-blue-800">TrunkEye</span>
-                    </div>
-                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
-                        <a href="about.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
-                        <a href="explore.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Explore</a>
-<a href="services.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Services</a>
-                        <a href="posts.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Posts</a>
-                        <a href="jobs.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Jobs</a>
-                        <a href="contact.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
-                    </div>
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <span class="puzzle-piece text-indigo-600 text-3xl"></span>
+                    <span class="text-2xl font-bold text-indigo-600">Spectrum Spark</span>
                 </div>
-                <div class="hidden sm:ml-6 sm:flex sm:items-center">
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out">Get Started</button>
-                </div>
-                <div class="-mr-2 flex items-center sm:hidden">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <i data-feather="menu"></i>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-indigo-600 transition">Home</a>
+                    <a href="about.html" class="text-indigo-600 font-medium">About</a>
+                    <a href="resources.html" class="text-gray-600 hover:text-indigo-600 transition">Resources</a>
+                    <a href="events.html" class="text-gray-600 hover:text-indigo-600 transition">Events</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-indigo-600 transition">Contact</a>
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                        Donate
                     </button>
                 </div>
+                <button class="md:hidden focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="bg-blue-700 text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                About TrunkEye
-            </h1>
-            <p class="mt-6 text-xl max-w-3xl mx-auto">
-                Delivering cutting-edge digital solutions with a team of 50+ professionals across diverse industries.
-            </p>
+    <div class="bg-indigo-600 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Story</h1>
+            <p class="text-xl max-w-2xl mx-auto">From a spark of passion to a movement for neurodiversity acceptance</p>
         </div>
     </div>
 
-    <!-- Our Story -->
-    <div class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Story</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    From startup to industry leader
-                </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                    Founded in Dubai, we've grown to become a trusted partner for digital transformation.
-                </p>
+    <!-- About Content -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Who We Are</h2>
+                <p class="text-gray-600">Spectrum Spark Foundation was founded in 2015 by a group of parents, educators, and autistic adults who saw the need for a different approach to autism support—one that celebrates neurodiversity rather than trying to "fix" it.</p>
             </div>
-
-            <div class="mt-16">
-                <div class="space-y-20 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20">
-                    <!-- Vision -->
-                    <div class="relative">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i data-feather="eye"></i>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-20">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-600">Our Vision</h3>
+                    <p class="text-gray-600 mb-6">A world where neurological differences are recognized and respected as a natural part of human diversity, and where autistic individuals have equal opportunities for education, employment, housing, and community participation.</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                            <i data-feather="eye" class="text-indigo-600"></i>
                         </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Vision</p>
-                        <p class="mt-2 ml-16 text-base text-gray-500">
-                            To be the most trusted digital transformation partner in the region, delivering innovative solutions that drive business success.
-                        </p>
+                        <p class="text-gray-600">Autistic individuals living authentically without pressure to conform to neurotypical standards</p>
                     </div>
-
-                    <!-- Mission -->
-                    <div class="relative">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i data-feather="target"></i>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-600">Our Approach</h3>
+                    <p class="text-gray-600 mb-6">We use a strengths-based framework that focuses on supporting individuals to develop skills while honoring their neurodivergent identity. Our programs are co-designed with autistic individuals to ensure they meet real needs.</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                            <i data-feather="compass" class="text-indigo-600"></i>
                         </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Mission</p>
-                        <p class="mt-2 ml-16 text-base text-gray-500">
-                            Empower businesses through technology by providing comprehensive digital solutions tailored to their unique needs.
-                        </p>
-                    </div>
-
-                    <!-- Values -->
-                    <div class="relative">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i data-feather="heart"></i>
-                        </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Values</p>
-                        <p class="mt-2 ml-16 text-base text-gray-500">
-                            Integrity, Innovation, Excellence, Collaboration, and Customer Success drive everything we do.
-                        </p>
+                        <p class="text-gray-600">Nothing about us without us—autistic voices lead our initiatives</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Timeline -->
-    <div class="bg-gray-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Journey</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Milestones and Achievements
-                </p>
+            <!-- Our Team -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Team</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Passionate professionals and advocates dedicated to the autism community</p>
             </div>
-
-            <div class="mt-16 flow-root">
-                <ul class="-mb-8">
-                    <!-- Timeline Item 1 -->
-                    <li class="relative pb-8 timeline-item">
-                        <div class="relative flex items-start space-x-3">
-                            <div>
-                                <div class="relative px-1">
-                                    <div class="h-8 w-8 bg-blue-500 rounded-full ring-8 ring-gray-50 flex items-center justify-center">
-                                        <i data-feather="flag" class="text-white h-4 w-4"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="min-w-0 flex-1 py-1.5">
-                                <div class="text-sm text-gray-500">
-                                    <span class="font-medium text-gray-900">Founded</span> in Dubai
-                                    <span class="whitespace-nowrap">2015</span>
-                                </div>
-                                <p class="mt-2 text-sm text-gray-500">
-                                    Started with 5 team members focusing on software development for local businesses.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- Timeline Item 2 -->
-                    <li class="relative pb-8 timeline-item">
-                        <div class="relative flex items-start space-x-3">
-                            <div>
-                                <div class="relative px-1">
-                                    <div class="h-8 w-8 bg-blue-500 rounded-full ring-8 ring-gray-50 flex items-center justify-center">
-                                        <i data-feather="users" class="text-white h-4 w-4"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="min-w-0 flex-1 py-1.5">
-                                <div class="text-sm text-gray-500">
-                                    <span class="font-medium text-gray-900">Team Expansion</span> to 20+
-                                    <span class="whitespace-nowrap">2017</span>
-                                </div>
-                                <p class="mt-2 text-sm text-gray-500">
-                                    Expanded our services to include digital marketing and financial services, growing our team significantly.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- Timeline Item 3 -->
-                    <li class="relative pb-8 timeline-item">
-                        <div class="relative flex items-start space-x-3">
-                            <div>
-                                <div class="relative px-1">
-                                    <div class="h-8 w-8 bg-blue-500 rounded-full ring-8 ring-gray-50 flex items-center justify-center">
-                                        <i data-feather="award" class="text-white h-4 w-4"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="min-w-0 flex-1 py-1.5">
-                                <div class="text-sm text-gray-500">
-                                    <span class="font-medium text-gray-900">Industry Recognition</span> Award
-                                    <span class="whitespace-nowrap">2019</span>
-                                </div>
-                                <p class="mt-2 text-sm text-gray-500">
-                                    Received the "Emerging Tech Company of the Year" award at the Middle East Technology Awards.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- Timeline Item 4 -->
-                    <li class="relative pb-8 timeline-item">
-                        <div class="relative flex items-start space-x-3">
-                            <div>
-                                <div class="relative px-1">
-                                    <div class="h-8 w-8 bg-blue-500 rounded-full ring-8 ring-gray-50 flex items-center justify-center">
-                                        <i data-feather="globe" class="text-white h-4 w-4"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="min-w-0 flex-1 py-1.5">
-                                <div class="text-sm text-gray-500">
-                                    <span class="font-medium text-gray-900">International Expansion</span>
-                                    <span class="whitespace-nowrap">2020</span>
-                                </div>
-                                <p class="mt-2 text-sm text-gray-500">
-                                    Began serving clients across the GCC region, expanding our footprint beyond the UAE.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- Timeline Item 5 -->
-                    <li class="relative timeline-item">
-                        <div class="relative flex items-start space-x-3">
-                            <div>
-                                <div class="relative px-1">
-                                    <div class="h-8 w-8 bg-blue-500 rounded-full ring-8 ring-gray-50 flex items-center justify-center">
-                                        <i data-feather="trending-up" class="text-white h-4 w-4"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="min-w-0 flex-1 py-1.5">
-                                <div class="text-sm text-gray-500">
-                                    <span class="font-medium text-gray-900">50+ Professionals</span> Team
-                                    <span class="whitespace-nowrap">2023</span>
-                                </div>
-                                <p class="mt-2 text-sm text-gray-500">
-                                    Now with over 50 professionals serving clients across 6 industries with comprehensive digital solutions.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Team Section -->
-    <div class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Team</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Meet Our Leadership
-                </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                    A diverse team of experts driving innovation and excellence.
-                </p>
-            </div>
-
-            <div class="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
-                <!-- Team Member 1 -->
-                <div class="team-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 ease-in-out">
-                    <div class="relative h-64">
-                        <img class="w-full h-full object-cover" src="http://static.photos/people/640x360/1" alt="CEO">
-                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/30"></div>
-                        <div class="absolute bottom-0 left-0 p-6">
-                            <h3 class="text-xl font-bold text-white">Ahmed Al-Mansoori</h3>
-                            <p class="text-blue-300">Founder & CEO</p>
-                        </div>
-                    </div>
+            <div class="grid md:grid-cols-3 gap-8 mb-20">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="http://static.photos/people/640x360/1" alt="Executive Director" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <p class="text-gray-500">
-                            Visionary leader with 15+ years in technology and business transformation, driving TrunkEye's strategic direction.
-                        </p>
-                        <div class="mt-4 flex space-x-4">
-                            <a href="#" class="text-blue-500 hover:text-blue-700">
-                                <i data-feather="linkedin"></i>
-                            </a>
-                            <a href="#" class="text-blue-500 hover:text-blue-700">
-                                <i data-feather="twitter"></i>
-                            </a>
-                        </div>
+                        <h3 class="text-xl font-semibold mb-1">Dr. Samantha Reyes</h3>
+                        <p class="text-indigo-600 mb-3">Executive Director</p>
+                        <p class="text-gray-600">Autistic psychologist with 15 years experience in neurodiversity-affirming practices</p>
                     </div>
                 </div>
-
-                <!-- Team Member 2 -->
-                <div class="team-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 ease-in-out">
-                    <div class="relative h-64">
-                        <img class="w-full h-full object-cover" src="http://static.photos/people/640x360/2" alt="CTO">
-                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/30"></div>
-                        <div class="absolute bottom-0 left-0 p-6">
-                            <h3 class="text-xl font-bold text-white">Sarah Johnson</h3>
-                            <p class="text-blue-300">Chief Technology Officer</p>
-                        </div>
-                    </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="http://static.photos/people/640x360/2" alt="Program Director" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <p class="text-gray-500">
-                            Technology strategist with expertise in enterprise architecture and digital transformation solutions.
-                        </p>
-                        <div class="mt-4 flex space-x-4">
-                            <a href="#" class="text-blue-500 hover:text-blue-700">
-                                <i data-feather="linkedin"></i>
-                            </a>
-                            <a href="#" class="text-blue-500 hover:text-blue-700">
-                                <i data-feather="twitter"></i>
-                            </a>
-                        </div>
+                        <h3 class="text-xl font-semibold mb-1">Jamal Williams</h3>
+                        <p class="text-indigo-600 mb-3">Program Director</p>
+                        <p class="text-gray-600">Special education expert and parent to autistic twins</p>
                     </div>
                 </div>
-
-                <!-- Team Member 3 -->
-                <div class="team-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 ease-in-out">
-                    <div class="relative h-64">
-                        <img class="w-full h-full object-cover" src="http://static.photos/people/640x360/3" alt="CFO">
-                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/30"></div>
-                        <div class="absolute bottom-0 left-0 p-6">
-                            <h3 class="text-xl font-bold text-white">Mohammed Khan</h3>
-                            <p class="text-blue-300">Chief Financial Officer</p>
-                        </div>
-                    </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="http://static.photos/people/640x360/3" alt="Outreach Coordinator" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <p class="text-gray-500">
-                            Financial expert overseeing our operations and ensuring sustainable growth and compliance.
-                        </p>
-                        <div class="mt-4 flex space-x-4">
-                            <a href="#" class="text-blue-500 hover:text-blue-700">
-                                <i data-feather="linkedin"></i>
-                            </a>
-                            <a href="#" class="text-blue-500 hover:text-blue-700">
-                                <i data-feather="twitter"></i>
-                            </a>
-                        </div>
+                        <h3 class="text-xl font-semibold mb-1">Elena Chen</h3>
+                        <p class="text-indigo-600 mb-3">Outreach Coordinator</p>
+                        <p class="text-gray-600">Autistic advocate and public speaker on neurodiversity in the workplace</p>
                     </div>
                 </div>
             </div>
 
-            <div class="mt-12 text-center">
-                <a href="jobs.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                    Join Our Team
-                    <i data-feather="arrow-right" class="ml-2"></i>
-                </a>
+            <!-- Our History -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Journey</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Key milestones in our organization's development</p>
             </div>
-        </div>
-    </div>
-
-    <!-- Culture Section -->
-    <div class="bg-gray-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Culture</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Work Environment
-                </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                    We foster a culture of innovation, collaboration, and continuous learning.
-                </p>
-            </div>
-
-            <div class="mt-16">
-                <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
-                    <div class="bg-white overflow-hidden shadow rounded-lg">
-                        <div class="px-4 py-5 sm:p-6">
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
-                                    <i data-feather="users" class="text-white"></i>
-                                </div>
-                                <div class="ml-5 w-0 flex-1">
-                                    <h3 class="text-lg leading-6 font-medium text-gray-900">Collaboration</h3>
-                                </div>
-                            </div>
-                            <div class="mt-4">
-                                <p class="text-base leading-6 text-gray-500">
-                                    We believe in working together across teams and departments to achieve the best results for our clients.
-                                </p>
-                            </div>
-                        </div>
+            <div class="timeline-container max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 mb-12 relative">
+                    <div class="md:text-right md:pr-8">
+                        <h3 class="text-xl font-semibold mb-2">2015</h3>
+                        <p class="text-gray-600">Foundation established by group of parents and autistic adults</p>
                     </div>
-
-                    <div class="bg-white overflow-hidden shadow rounded-lg">
-                        <div class="px-4 py-5 sm:p-6">
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
-                                    <i data-feather="book" class="text-white"></i>
-                                </div>
-                                <div class="ml-5 w-0 flex-1">
-                                    <h3 class="text-lg leading-6 font-medium text-gray-900">Learning</h3>
-                                </div>
-                            </div>
-                            <div class="mt-4">
-                                <p class="text-base leading-6 text-gray-500">
-                                    Continuous learning is at our core, with regular training sessions and knowledge sharing.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="hidden md:block"></div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 mb-12 relative">
+                    <div class="hidden md:block"></div>
+                    <div class="md:text-left md:pl-8">
+                        <h3 class="text-xl font-semibold mb-2">2017</h3>
+                        <p class="text-gray-600">Launched first community support groups in three cities</p>
                     </div>
-
-                    <div class="bg-white overflow-hidden shadow rounded-lg">
-                        <div class="px-4 py-5 sm:p-6">
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
-                                    <i data-feather="heart" class="text-white"></i>
-                                </div>
-                                <div class="ml-5 w-0 flex-1">
-                                    <h3 class="text-lg leading-6 font-medium text-gray-900">Well-being</h3>
-                                </div>
-                            </div>
-                            <div class="mt-4">
-                                <p class="text-base leading-6 text-gray-500">
-                                    We prioritize our team's well-being with flexible work arrangements and wellness programs.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 mb-12 relative">
+                    <div class="md:text-right md:pr-8">
+                        <h3 class="text-xl font-semibold mb-2">2019</h3>
+                        <p class="text-gray-600">Expanded to offer workplace inclusion programs with 20 corporate partners</p>
                     </div>
+                    <div class="hidden md:block"></div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 mb-12 relative">
+                    <div class="hidden md:block"></div>
+                    <div class="md:text-left md:pl-8">
+                        <h3 class="text-xl font-semibold mb-2">2022</h3>
+                        <p class="text-gray-600">Served our 10,000th family through various programs and initiatives</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 relative">
+                    <div class="md:text-right md:pr-8">
+                        <h3 class="text-xl font-semibold mb-2">2023</h3>
+                        <p class="text-gray-600">Launched national awareness campaign reaching over 5 million people</p>
+                    </div>
+                    <div class="hidden md:block"></div>
+                    <div class="timeline-dot"></div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- CTA Section -->
-    <div class="bg-blue-700">
-        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-base font-semibold text-blue-300 tracking-wide uppercase">Ready to learn more?</h2>
-                <p class="mt-1 text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
-                    Let's build something great together
-                </p>
-                <p class="max-w-xl mt-5 mx-auto text-xl text-blue-100">
-                    Discover how our team can help transform your business.
-                </p>
-                <div class="mt-8">
-                    <a href="contact.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-700 bg-white hover:bg-blue-50">
-                        Contact Us
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                <div class="space-y-8 xl:col-span-1">
-                    <span class="text-2xl font-bold text-white">TrunkEye</span>
-                    <p class="text-gray-300 text-base">
-                        Delivering cutting-edge digital solutions to transform your business.
-                    </p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-gray-400 hover:text-gray-300">
-                            <span class="sr-only">Facebook</span>
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="puzzle-piece text-indigo-400 text-2xl"></span>
+                        <span class="text-xl font-bold">Spectrum Spark</span>
+                    </div>
+                    <p class="text-gray-400">Illuminating the spectrum, one life at a time.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition">Resources</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white transition">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Donate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Volunteer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
                             <i data-feather="facebook"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-gray-300">
-                            <span class="sr-only">Twitter</span>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
                             <i data-feather="twitter"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-gray-300">
-                            <span class="sr-only">LinkedIn</span>
-                            <i data-feather="linkedin"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-gray-300">
-                            <span class="sr-only">Instagram</span>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
                             <i data-feather="instagram"></i>
                         </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Subscribe to our newsletter</p>
+                    <div class="flex mt-2">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-800 text-white rounded-l-md focus:outline-none focus:ring-1 focus:ring-indigo-500 w-full">
+                        <button class="bg-indigo-600 px-4 py-2 rounded-r-md hover:bg-indigo-700 transition">
+                            <i data-feather="send"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-                    <div class="md:grid md:grid-cols-2 md:gap-8">
-                        <div>
-                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
-                                Solutions
-                            </h3>
-                            <div class="mt-4 space-y-4">
-                                <a href="#" class="text-base text-gray-400 hover:text-white">
-                                    Software Development
-                                </a>
-                                <a href="#" class="text-base text-gray-400 hover:text-white">
-                                    Digital Marketing
-                                </a>
-                                <a href="#" class="text-base text-gray-400 hover:text-white">
-                                    Financial Services
-                                </a>
-                                <a href="#" class="text-base text-gray-400 hover:text-white">
-                                    Enterprise Solutions
-                                </a>
-                            </div>
-                        </div>
-                        <div class="mt-12 md:mt-0">
-                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
-                                Support
-                            </h3>
-                            <div class="mt-4 space-y-4">
-                                <a href="#" class="text-base text-gray-400 hover:text-white">
-                                    Documentation
-                                </a>
-                                <a href="#" class="text-base text-gray-400 hover:text-white">
-                                    Guides
-                                </a>
-                                <a href="#" class="text-base text-gray-400 hover:text-white">
-                                    API Status
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="md:grid md:grid-cols-{"ok":false,"message":"terminated"}
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Spectrum Spark Foundation. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
 </body>
 </html>

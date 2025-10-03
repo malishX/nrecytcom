@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | Spectrum Spark Foundation</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .resource-category {
+            transition: all 0.3s ease;
+        }
+        .resource-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.1);
+        }
+        .filter-btn.active {
+            background-color: #4f46e5;
+            color: white;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <span class="puzzle-piece text-indigo-600 text-3xl"></span>
+                    <span class="text-2xl font-bold text-indigo-600">Spectrum Spark</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-indigo-600 transition">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-indigo-600 transition">About</a>
+                    <a href="resources.html" class="text-indigo-600 font-medium">Resources</a>
+                    <a href="events.html" class="text-gray-600 hover:text-indigo-600 transition">Events</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-indigo-600 transition">Contact</a>
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                        Donate
+                    </button>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-indigo-600 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Resources</h1>
+            <p class="text-xl max-w-2xl mx-auto">Tools, guides, and information to support autistic individuals and their families</p>
+        </div>
+    </div>
+
+    <!-- Resource Categories -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Find What You Need</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Filter our resources by category</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active px-4 py-2 rounded-full border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white transition" data-category="all">
+                    All Resources
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white transition" data-category="education">
+                    <i data-feather="book" class="inline mr-2 w-4 h-4"></i> Education
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white transition" data-category="health">
+                    <i data-feather="heart" class="inline mr-2 w-4 h-4"></i> Health
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white transition" data-category="employment">
+                    <i data-feather="briefcase" class="inline mr-2 w-4 h-4"></i> Employment
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white transition" data-category="legal">
+                    <i data-feather="gavel" class="inline mr-2 w-4 h-4"></i> Legal Rights
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white transition" data-category="community">
+                    <i data-feather="users" class="inline mr-2 w-4 h-4"></i> Community
+                </button>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Education Resource -->
+                <div class="resource-card bg-white rounded-lg shadow-md overflow-hidden resource-category" data-categories="education">
+                    <img src="http://static.photos/education/640x360/1" alt="Education resource" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded">Education</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Inclusive Classroom Guide</h3>
+                        <p class="text-gray-600 mb-4">Strategies for teachers to create neurodiversity-affirming learning environments.</p>
+                        <a href="#" class="text-indigo-600 font-medium flex items-center">
+                            Download <i data-feather="download" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Health Resource -->
+                <div class="resource-card bg-white rounded-lg shadow-md overflow-hidden resource-category" data-categories="health">
+                    <img src="http://static.photos/medical/640x360/2" alt="Health resource" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Health</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Sensory Processing Handbook</h3>
+                        <p class="text-gray-600 mb-4">Understanding and accommodating sensory differences in autistic individuals.</p>
+                        <a href="#" class="text-indigo-600 font-medium flex items-center">
+                            View Online <i data-feather="external-link" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Employment Resource -->
+                <div class="resource-card bg-white rounded-lg shadow-md overflow-hidden resource-category" data-categories="employment">
+                    <img src="http://static.photos/workspace/640x360/3" alt="Employment resource" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Employment</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Workplace Accommodations</h3>
+                        <p class="text-gray-600 mb-4">Guide for employees and employers on creating autism-friendly workplaces.</p>
+                        <a href="#" class="text-indigo-600 font-medium flex items-center">
+                            Download PDF <i data-feather="file-text" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Legal Resource -->
+                <div class="resource-card bg-white rounded-lg shadow-md overflow-hidden resource-category" data-categories="legal">
+                    <img src="http://static.photos/legal/640x360/4" alt="Legal resource" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Legal Rights</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Your Rights Under the Law</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive overview of disability rights and protections.</p>
+                        <a href="#" class="text-indigo-600 font-medium flex items-center">
+                            Learn More <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Community Resource -->
+                <div class="resource-card bg-white rounded-lg shadow-md overflow-hidden resource-category" data-categories="community">
+                    <img src="http://static.photos/people/640x360/5" alt="Community resource" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-pink-100 text-pink-800 text-xs font-semibold px-2.5 py-0.5 rounded">Community</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Building Support Networks</h3>
+                        <p class="text-gray-600 mb-4">How to find and create supportive communities for autistic individuals.</p>
+                        <a href="#" class="text-indigo-600 font-medium flex items-center">
+                            Read Guide <i data-feather="book-open" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Education Resource -->
+                <div class="resource-card bg-white rounded-lg shadow-md overflow-hidden resource-category" data-categories="education">
+                    <img src="http://static.photos/education/640x360/6" alt="Education resource" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded">Education</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Transition Planning Toolkit</h3>
+                        <p class="text-gray-600 mb-4">Resources for students moving from school to adult life.</p>
+                        <a href="#" class="text-indigo-600 font-medium flex items-center">
+                            Download Toolkit <i data-feather="download" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition">
+                    Load More Resources
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Videos -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Featured Videos</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Educational content from our experts and community</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i data-feather="play-circle" class="text-indigo-600 w-12 h-12"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Understanding Neurodiversity</h3>
+                        <p class="text-gray-600 mb-4">Dr. Reyes explains the neurodiversity paradigm in 15 minutes.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i data-feather="clock" class="mr-2 w-4 h-4"></i>
+                            <span>15 min</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i data-feather="play-circle" class="text-indigo-600 w-12 h-12"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Sensory-Friendly Spaces</h3>
+                        <p class="text-gray-600 mb-4">How to create environments that accommodate sensory differences.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i data-feather="clock" class="mr-2 w-4 h-4"></i>
+                            <span>22 min</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i data-feather="play-circle" class="text-indigo-600 w-12 h-12"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Autism & Employment</h3>
+                        <p class="text-gray-600 mb-4">Success stories and strategies from autistic professionals.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i data-feather="clock" class="mr-2 w-4 h-4"></i>
+                            <span>18 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Resources -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Additional Resources</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Trusted organizations and tools we recommend</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <a href="#" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="globe" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="font-medium">ASAN</h3>
+                    <p class="text-sm text-gray-600 mt-1">Autistic Self Advocacy Network</p>
+                </a>
+                
+                <a href="#" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="book" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="font-medium">AANE</h3>
+                    <p class="text-sm text-gray-600 mt-1">Asperger/Autism Network</p>
+                </a>
+                
+                <a href="#" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="tool" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="font-medium">Spectrum Suite</h3>
+                    <p class="text-sm text-gray-600 mt-1">Communication Tools</p>
+                </a>
+                
+                <a href="#" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="headphones" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="font-medium">Sensory Apps</h3>
+                    <p class="text-sm text-gray-600 mt-1">Regulation Tools</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="puzzle-piece text-indigo-400 text-2xl"></span>
+                        <span class="text-xl font-bold">Spectrum Spark</span>
+                    </div>
+                    <p class="text-gray-400">Illuminating the spectrum, one life at a time.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition">Resources</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white transition">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Donate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Volunteer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Subscribe to our newsletter</p>
+                    <div class="flex mt-2">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-800 text-white rounded-l-md focus:outline-none focus:ring-1 focus:ring-indigo-500 w-full">
+                        <button class="bg-indigo-600 px-4 py-2 rounded-r-md hover:bg-indigo-700 transition">
+                            <i data-feather="send"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Spectrum Spark Foundation. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        
+        // Resource filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const resourceCards = document.querySelectorAll('.resource-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active', 'bg-indigo-600', 'text-white'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active', 'bg-indigo-600', 'text-white');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide resources based on category
+                    resourceCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-categories').includes(category)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
